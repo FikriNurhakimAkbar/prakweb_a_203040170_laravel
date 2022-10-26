@@ -21,12 +21,15 @@ Route::get('/', function () {
 });
 Route::get('/about', function () {
     return view('about', [
-        "name" => "Faisal Ibnul Hakim",
-        "email" => "faisalhakim081@gmail.com",
-        "image" => "fiuls.png",
+        "name" => "Dray",
+        "email" => "dray123@gmail.com",
+        "image" => "foto.png",
         "title" => "About"
     ]);
 });
 
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('posts/{slug}', [PostController::class, 'show']);
+
+
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
