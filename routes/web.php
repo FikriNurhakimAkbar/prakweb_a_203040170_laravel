@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +14,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Faisal Ibnul Hakim",
+        "email" => "faisalhakim081@gmail.com",
+        "image" => "fiuls.png",
+        "title" => "About"
+    ]);
+});
+
+Route::get('/blog', [PostController::class, 'index']);
+Route::get('posts/{slug}', [PostController::class, 'show']);
