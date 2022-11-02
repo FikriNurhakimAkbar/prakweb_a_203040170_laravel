@@ -1,9 +1,11 @@
 <?php
+
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Models\Category;
 use App\Models\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +20,6 @@ use App\Models\User;
 Route::get('/', function () {
     return view('home', [
         "title" => "Home",
-        "title" => "Home",
         "active" => "home"
 
     ]);
@@ -29,14 +30,19 @@ Route::get('/about', function () {
         "title" => "About",
         "active" => "about",
         "name" => "Fikri Nurhakim",
-        "email" => "nurhakimf2906@gmail.com",
+        "email" => "fikrinurhakim12@gmail.com",
         "image" => "fikri.jpeg"
     ]);
 });
 
+Route::get('/blog', [PostController::class, 'index']);
+
+
+// halaman single post
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
 Route::get('/categories', function () {
     return view('categories', [
-        'title' => "Post Categories",
         'title' => 'Post Categories',
         'active' => 'categories',
         'categories' => Category::all()
@@ -55,6 +61,6 @@ Route::get('/authors/{author:username}', function (User $author) {
     return view('posts', [
         'title' => "Post by Author : $author->name",
         'active' => 'categories',
-        'posts' => $author->posts->load('category', 'author')
+        'posts' => $author->posts->load('category', 'author'),
     ]);
 });

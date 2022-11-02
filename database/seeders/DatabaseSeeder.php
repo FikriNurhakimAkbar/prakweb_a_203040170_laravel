@@ -1,13 +1,10 @@
 <?php
-
 namespace Database\Seeders;
-
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -17,20 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-
         //User::create([
-        //    'name' => 'Falz',
-        //    'email' => 'faldiarsan524@gmail.com',
+        //    'name' => 'M Faishal Thariqulhaq',
+        //    'email' => 'isalthoriq12@gmail.com',
         //    'password' => bcrypt('12345')
         //]);
-
-        //User::create([
-        //    'name' => 'Indra',
-        //    'email' => 'indragta@gmail.com',
-        //    'password' => bcrypt('12345')
-        //]);
-
+        // User::create([
+        //    'name' => 'Salma',
+        //    'email' => 'salma@gmail.com',
+        //    'password' => bcrypt('54321')
+        // ]);
         User::factory(3)->create();
         Category::create([
             'name' => 'Web Programming',
@@ -47,30 +40,37 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
         Post::factory(20)->create();
-
         //Post::create([
-        //    'title' => 'Judul Pertama',
-        //    'slug' => 'Judul_Pertama',
-        //    'excerpt' => 'Programming adalah kegiatan membuat set kode instruksi untuk program (sofware) yang dijalankan oleh komputer. ',
-        //    'body' => ' Programming adalah kegiatan membuat set kode instruksi untuk program (sofware) yang dijalankan oleh komputer. Agar program tersebut bisa berjalan dengan baik, programming juga melibatkan proses menulis, menguji, memperbaiki, dan melakukan pengecekan ulang pada kode instruksi yang sudah dibuat.',
-        //    'category_id' => 1,
-        //    'user_id' => 1
-        //]);
-
-        //Post::create([
-        //    'title' => 'Judul kedua',
-        //    'slug' => 'Judul_kedua',
-        //    'excerpt' => 'Nama saya Indra gta saya lahir dibandung. ',
-        //    'body' => ' Nama saya Indra gta saya lahir dibandung tgl 15 may 2000 saya menjadi mahasiswa itb dan sudah menginjak tingkat 3.',
-        //   'category_id' => 2,
-        //    'user_id' => 2
-        //]);
-
-
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        //'title' => 'Judul Pertama',
+        //'slug' => 'judul-pertama',
+        //'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius.',
+        // 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius. Qui, placeat! Qui possimus nobis vitae pariatur. Libero, magni, fugiat iusto at suscipit doloremque quis blanditiis dignissimos dolor vero eligendi quas facilis dolores corporis corrupti expedita quasi voluptates accusamus pariatur tempora mollitia exercitationem. Consequuntur quis iusto pariatur, ipsum quia ducimus tempora at, excepturi nostrum asperiores expedita omnis dolore, reiciendis obcaecati cumque? Provident similique adipisci enim excepturi quisquam? Iusto, natus, sunt blanditiis ratione nesciunt ex incidunt, officiis voluptate voluptatibus iure provident adipisci dignissimos? Dolorum nesciunt maxime blanditiis?',
+        //'category_id' => 1,
+        // 'user_id' => 1
         // ]);
+        // Post::create([
+        //'title' => 'Judul Kedua',
+        // 'slug' => 'judul-kedua',
+        //'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius.',
+        // 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius. Qui, placeat! Qui possimus nobis vitae pariatur. Libero, magni, fugiat iusto at suscipit doloremque quis blanditiis dignissimos dolor vero eligendi quas facilis dolores corporis corrupti expedita quasi voluptates accusamus pariatur tempora mollitia exercitationem. Consequuntur quis iusto pariatur, ipsum quia ducimus tempora at, excepturi nostrum asperiores expedita omnis dolore, reiciendis obcaecati cumque? Provident similique adipisci enim excepturi quisquam? Iusto, natus, sunt blanditiis ratione nesciunt ex incidunt, officiis voluptate voluptatibus iure provident adipisci dignissimos? Dolorum nesciunt maxime blanditiis?',
+        //'category_id' => 1,
+        // 'user_id' => 1
+        //]);
+        // Post::create([
+        // 'title' => 'Judul Ketiga',
+        // 'slug' => 'judul-ketiga',
+        //'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius.',
+        //'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius. Qui, placeat! Qui possimus nobis vitae pariatur. Libero, magni, fugiat iusto at suscipit doloremque quis blanditiis dignissimos dolor vero eligendi quas facilis dolores corporis corrupti expedita quasi voluptates accusamus pariatur tempora mollitia exercitationem. Consequuntur quis iusto pariatur, ipsum quia ducimus tempora at, excepturi nostrum asperiores expedita omnis dolore, reiciendis obcaecati cumque? Provident similique adipisci enim excepturi quisquam? Iusto, natus, sunt blanditiis ratione nesciunt ex incidunt, officiis voluptate voluptatibus iure provident adipisci dignissimos? Dolorum nesciunt maxime blanditiis?',
+        //'category_id' => 2,
+        // 'user_id' => 1
+        //]);
+        //Post::create([
+        //'title' => 'Judul Keempat',
+        // 'slug' => 'judul-keempat',
+        //'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius.',
+        // 'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a dignissimos fuga error, voluptatibus temporibus, assumenda nostrum perspiciatis voluptatum atque, voluptates reprehenderit harum eius. Qui, placeat! Qui possimus nobis vitae pariatur. Libero, magni, fugiat iusto at suscipit doloremque quis blanditiis dignissimos dolor vero eligendi quas facilis dolores corporis corrupti expedita quasi voluptates accusamus pariatur tempora mollitia exercitationem. Consequuntur quis iusto pariatur, ipsum quia ducimus tempora at, excepturi nostrum asperiores expedita omnis dolore, reiciendis obcaecati cumque? Provident similique adipisci enim excepturi quisquam? Iusto, natus, sunt blanditiis ratione nesciunt ex incidunt, officiis voluptate voluptatibus iure provident adipisci dignissimos? Dolorum nesciunt maxime blanditiis?',
+        // 'category_id' => 2,
+        // 'user_id' => 2
+        //]);
     }
 }
